@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ba914aa6-bab0-4848-9832-b882635d5dda" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:43966/DimService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DimService.disco" MetadataType="Disco" ID="17ea7f02-0641-4998-81e1-c74a8d16dd79" SourceId="1" SourceUrl="http://localhost:43966/DimService.svc?disco" />
+    <MetadataFile FileName="DimService.xsd" MetadataType="Schema" ID="689353b5-7df3-4b46-9957-053b56aef6e6" SourceId="1" SourceUrl="http://localhost:43966/DimService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DimService.wsdl" MetadataType="Wsdl" ID="f83cc338-3c42-4a25-b3ac-dbe7678045ad" SourceId="1" SourceUrl="http://localhost:43966/DimService.svc?wsdl" />
+    <MetadataFile FileName="DimService1.xsd" MetadataType="Schema" ID="ffa9538b-17f6-4cba-9497-dd1d7de6a416" SourceId="1" SourceUrl="http://localhost:43966/DimService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DimService2.xsd" MetadataType="Schema" ID="b5c7f093-d89c-437d-98d5-faf4c117dbe4" SourceId="1" SourceUrl="http://localhost:43966/DimService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

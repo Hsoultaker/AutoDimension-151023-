@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DimService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IDimService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:43966/DimService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:43966/DimService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:43966/DimService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDimService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_CloseService_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseService" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_CloseService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_GetUserAuthority_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAuthority" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_GetUserAuthority_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAuthorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_GetUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserName" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_GetUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_IsPartInViewBox_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPartInViewBox" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_IsPartInViewBox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPartInViewBoxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_JudgeLineSlope_InputMessage">
+    <wsdl:part name="parameters" element="tns:JudgeLineSlope" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_JudgeLineSlope_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JudgeLineSlopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_IsTwoPointEqual_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsTwoPointEqual" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_IsTwoPointEqual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsTwoPointEqualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_IsLineIntersectWithLineSegment_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsLineIntersectWithLineSegment" />
+  </wsdl:message>
+  <wsdl:message name="IDimService_IsLineIntersectWithLineSegment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsLineIntersectWithLineSegmentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDimService">
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDimService/GetUser" message="tns:IDimService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDimService/GetUserResponse" message="tns:IDimService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDimService/CloseService" message="tns:IDimService_CloseService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDimService/CloseServiceResponse" message="tns:IDimService_CloseService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAuthority">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDimService/GetUserAuthority" message="tns:IDimService_GetUserAuthority_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDimService/GetUserAuthorityResponse" message="tns:IDimService_GetUserAuthority_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDimService/GetUserName" message="tns:IDimService_GetUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDimService/GetUserNameResponse" message="tns:IDimService_GetUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPartInViewBox">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDimService/IsPartInViewBox" message="tns:IDimService_IsPartInViewBox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDimService/IsPartInViewBoxResponse" message="tns:IDimService_IsPartInViewBox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JudgeLineSlope">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDimService/JudgeLineSlope" message="tns:IDimService_JudgeLineSlope_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDimService/JudgeLineSlopeResponse" message="tns:IDimService_JudgeLineSlope_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsTwoPointEqual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDimService/IsTwoPointEqual" message="tns:IDimService_IsTwoPointEqual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDimService/IsTwoPointEqualResponse" message="tns:IDimService_IsTwoPointEqual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsLineIntersectWithLineSegment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDimService/IsLineIntersectWithLineSegment" message="tns:IDimService_IsLineIntersectWithLineSegment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDimService/IsLineIntersectWithLineSegmentResponse" message="tns:IDimService_IsLineIntersectWithLineSegment_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IDimService" type="tns:IDimService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IDimService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUser">
+      <soap12:operation soapAction="http://tempuri.org/IDimService/GetUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseService">
+      <soap12:operation soapAction="http://tempuri.org/IDimService/CloseService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAuthority">
+      <soap12:operation soapAction="http://tempuri.org/IDimService/GetUserAuthority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap12:operation soapAction="http://tempuri.org/IDimService/GetUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPartInViewBox">
+      <soap12:operation soapAction="http://tempuri.org/IDimService/IsPartInViewBox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JudgeLineSlope">
+      <soap12:operation soapAction="http://tempuri.org/IDimService/JudgeLineSlope" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsTwoPointEqual">
+      <soap12:operation soapAction="http://tempuri.org/IDimService/IsTwoPointEqual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLineIntersectWithLineSegment">
+      <soap12:operation soapAction="http://tempuri.org/IDimService/IsLineIntersectWithLineSegment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DimService">
+    <wsdl:port name="WSHttpBinding_IDimService" binding="tns:WSHttpBinding_IDimService">
+      <soap12:address location="http://localhost:43966/DimService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:43966/DimService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
